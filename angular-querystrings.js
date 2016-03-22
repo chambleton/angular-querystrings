@@ -3,7 +3,7 @@
 'use strict';
 (function(){
 
-    var angularQueryStrings = angular.module('angular-querystrings',[]);   
+    var angularQueryStrings = angular.module('angularQueryStrings',[]);   
     
         // I work in conjunction with the ngQueryStringZone directive to define the merge
 		// algorithm used to integrate the zone-oriented query string params.
@@ -168,5 +168,5 @@
 				}
 			}
 		);
-
+    module.exports = angularQueryStrings;
 })();

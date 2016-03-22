@@ -1,1 +1,3 @@
-module.exports = require("angular-querystrings");
+var angularQueryStrings = require('angular-querystrings');
+
+module.exports = angularQueryStrings;
