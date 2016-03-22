@@ -1,0 +1,16 @@
+{
+  "name": "angular-querystrings",
+  "version": "1.0.0",
+  "description": "Fork of Ben Nadel's ngQueryString demo project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chambleton/angular-querystrings.git"
+  },
+  "author": "Chris Hambleton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chambleton/angular-querystrings/issues"
+  },
+  "homepage": "https://github.com/chambleton/angular-querystrings#readme"
+}
