@@ -1,7 +1,7 @@
 // Fork from https://github.com/bennadel/JavaScript-Demos/blob/master/demos/ng-query-string-zone/index.htm
 
-(function(){
-    'use strict';
+(function () {
+  'use strict';
     var mod = angular.module('angularQueryStrings',[]);   
     
         // I work in conjunction with the ngQueryStringZone directive to define the merge
@@ -90,7 +90,7 @@
 		// I observe the given query string subset and generate a full HREF attribute
 		// that merges the given subset into the existing location.
 		mod.directive(
-			"ngQueryString",
+			"ngQueryString", ["$location",
 			function ngQueryStringDirective( $location ) {
 				// Return the directive configuration object. 
 				return({
@@ -115,10 +115,14 @@
 						} else {
 							merge( search, params );
 						}
+						var href = attributes.href;
+						if (!href) {
+						  href = $location.path();
+						}
 						// Update the element HREF to use the integrated URL.
 						attributes.$set( 
 							"href",
-							buildUrl( $location.path(), search, $location.hash() )
+							buildUrl( href, search, $location.hash() )
 						);
 					}
 				}
@@ -165,7 +169,7 @@
 					}
 					return( parsed );
 				}
-			}
+			}]
 		);
     module.exports = mod;
 })();
